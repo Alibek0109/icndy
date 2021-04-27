@@ -1,0 +1,361 @@
+@import 'fonts.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* header */
+/* *********************** */
+
+.header {
+    height: 100vh;
+    background: url(../img/headerbg.png) no-repeat center /cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__flex {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__inner {
+    display: flex;
+}
+
+.header__logo {
+    display: block;
+    background: #ffffff;
+    color: #81807f;
+    font-size: 27px;
+    padding: 18px 32px;
+    font-family: "Nova-Semibold";
+    margin: 40px 0;
+}
+
+.header__nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__link {
+    display: block;
+    font-size: 18px;
+    color: white;
+    font-family: "Nova-Semibold";
+    margin-left: 70px;
+    transition: 500ms;
+}
+
+.header__link:hover {
+    color: #f84545;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 60px;
+    color: white;
+    line-height: 50px;
+    margin-bottom: 50px;
+    font-family: "Nova-Light";
+}
+
+.header__buy {
+    font-family: "Nova-Bold";
+    font-size: 30px;
+    color: #f84545;
+    line-height: 21px;
+}
+
+.header__arrow {
+    display: block;
+    color: white;
+    font-size: 60px;
+    margin: 0 auto 40px;
+    width: max-content;
+    
+}
+
+/* main */
+/* ************************************ */
+
+.section__1 {
+    display: block;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "sneakers sneakers man"
+    "sneakers sneakers woman"
+    "army palace nike";
+    grid-gap: 50px;
+}
+
+.main__sneakers {
+    grid-area: sneakers;
+    max-width: 980px;
+    width: 100%;
+}
+
+.main__mank {
+    grid-area: man;
+}
+
+.main__woman {
+    grid-area: woman;
+}
+
+.main__army {
+    grid-area: army;
+}
+
+.main__palace {
+    grid-area: palace;
+}
+
+.main__nike {
+    grid-area: nike;
+}
+
+.main__man,
+.main__woman,
+.main__army,
+.main__palace,
+.main__nike {
+    max-width: 450px;
+    width: 100%;
+}
+
+
+/* ***************************** */
+
+.pic__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__pic {
+    display: block;
+    max-width: 425px;
+    width: 25%;
+}
+
+/* footer */
+/* ************************************ */
+
+.footer {
+    padding: 70px 0;
+}
+
+.footer__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__link-block {
+    display: flex;
+}
+
+.footer__link {
+    display: block;
+    margin-right: 60px;
+    color: black;
+    font-size: 18px;
+    font-family: "Nova-Semibold";
+    transition: 500ms;
+}
+
+.footer__link:hover {
+    color: #f84545;
+}
+
+.footer__instagram,
+.footer__facebook,
+.footer__twitter {
+    font-size: 26px;
+    margin-left: 30px;
+    color: black;
+    transition: 500ms;
+}
+
+.footer__instagram:hover {
+    color: #C13584;
+    ;
+}
+
+.footer__facebook:hover {
+    color: #4267B2;
+}
+
+.footer__twitter:hover {
+    color: #1DA1F2;
+}
+
+
+
+@media (max-width: 992px) {
+
+    /* header */
+    .header__link {
+        margin-left: 40px;
+    }
+
+    /* main */
+    
+    .section__1 {
+        grid-gap: 30px;
+    }
+
+    /* footer */
+    .footer {
+        padding: 50px 0;
+    }
+
+    .footer__link {
+        margin-right: 30px;
+        font-size: 16px;
+    }
+
+    .footer__instagram,
+    .footer__facebook,
+    .footer__twitter {
+        margin-left: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* header */
+    .header__logo {
+        margin: 20px 0;
+    }
+
+    .header__link {
+        display: none;
+    }
+
+    .header__nav {
+        flex-grow: 1;
+    }
+
+    .header__burger {
+        display: block;
+        font-size: 40px;
+        color: white;
+    }
+
+    /* main */
+    .section__1 {
+        padding: 40px 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "sneakers man woman "
+        "army palace nike";
+    }
+
+    .section__pic {
+        width: 50%;
+    }
+
+    /* footer */
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer__flex {
+        flex-direction: column;
+    }
+
+    .footer__link-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__link {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .footer__instagram {
+        margin-left: 0;
+    }
+
+    .footer__facebook,
+    .footer__twitter {
+        margin-left: 30px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    /* header */
+    .header__title {
+        font-size: 30px;
+    }
+
+    .header__buy {
+        font-size: 20px;
+    }
+
+    /* main */
+    .section__1 {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "sneakers"
+        "man" 
+        "woman"
+        "army"
+        "palace"
+        "nike";
+    }
+
+    .main__sneakers,
+    .main__man,
+    .main__woman,
+    .main__army,
+    .main__palace,
+    .main__nike {
+        margin: 0 auto;
+    }
+
+    .section__pic {
+        width: 100%;
+    }
+}
